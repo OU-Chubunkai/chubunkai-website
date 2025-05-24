@@ -1,0 +1,104 @@
+.socialLinks {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  justify-content: center;
+  gap: 40px; /* アイコン間の間隔 */
+  margin-bottom: 20px;
+}
+
+.socialLinksButton {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  justify-content: center;
+  gap: 10px; /* アイコン間の間隔 */
+  margin-bottom: 20px;
+}
+
+.socialLinks a,
+.socialLinksButton a {
+  text-decoration: none;
+  font-size: 1.5rem; /* アイコンとテキスト全体のサイズ調整 */
+  display: flex; /* アイコンとテキストを横並びにする */
+  align-items: center; /* アイコンとテキストを中央揃えにする */
+  justify-content: center; /* グリッドセル内でアイコンを中央揃え */
+  cursor: 'pointer';
+  border: 'none';
+  background: 'transparent';
+  display: 'flex';
+}
+
+.socialLinks button,
+.socialLinksButton button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+  color: #333;
+  font-size: 1.5rem; /* アイコンとテキスト全体のサイズ調整 */
+  display: flex; /* アイコンとテキストを横並びにする */
+  align-items: center; /* アイコンとテキストを中央揃えにする */
+  justify-content: center; /* グリッドセル内でアイコンを中央揃え */
+}
+
+.tooltipWrapper {
+  position: relative;
+  display: inline-block; /* 必要に応じて */
+}
+
+.tooltipWrapper::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%; /* ツールチップの位置調整 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s ease-in-out, visibility 0s 0.1s; /* 短い遅延で表示 */
+  z-index: 10; /* 他の要素より前面に表示 */
+}
+
+.tooltipWrapper:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s; /* ホバーしたらすぐに表示 */
+}
+
+.socialLinks a:hover
+.socialLinks button:hover
+.socialLinksButton a:hover,
+.socialLinksButton button:hover {
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+.socialIcon {
+  font-size: 2rem !important; /* アイコン自体のサイズ調整 */
+}  
+
+
+@media (max-width: 768px) {
+
+  .socialLinks button,
+  .socialLinksButton button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem; /* アイコンとテキスト全体のサイズ調整 */
+    display: flex; /* アイコンとテキストを横並びにする */
+    align-items: center; /* アイコンとテキストを中央揃えにする */
+    justify-content: center; /* グリッドセル内でアイコンを中央揃え */
+  }
+}
