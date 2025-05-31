@@ -1,0 +1,4 @@
+.env
+nextjs-app/
+db/init.sql
+docker-compose.prod.yml
