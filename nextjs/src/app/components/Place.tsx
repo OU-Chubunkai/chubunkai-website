@@ -1,13 +1,14 @@
 'use client'
 import React, { useState } from 'react'; // useState をインポートします
 import { FaRegCompass } from "react-icons/fa";
+const map_url = process.env.NEXT_PUBLIC_GOOGLE_MAP_URL + "?key=" + process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY;
 
 const Place = () => {
   // ここに2つのキャンパスのGoogle Map埋め込み用URLを設定してください。
   // Google Mapsを開き、場所を検索 -> 「共有」-> 「地図を埋め込む」で取得できます。
   const mapUrls = [
-    process.env.GOOGLE_MAP_API_URL + "&q=大阪大学 豊中キャンパス",
-    process.env.GOOGLE_MAP_API_URL + "&q=大阪大学 箕面キャンパス" 
+    map_url + "&q=大阪大学 豊中キャンパス",
+    map_url + "&q=大阪大学 箕面キャンパス" 
   ];
 
   // 現在表示するMapのURLのインデックスを管理するstateを作成します。

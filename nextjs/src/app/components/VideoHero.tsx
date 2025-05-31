@@ -24,7 +24,7 @@ const VideoHero = (props: VideoHeroProps) => {
         className="absolute top-0 left-0 w-full h-full"
         style={{ backgroundColor: overlayColor }}
       ></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10 place-items-center-safe">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10 flex flex-col items-center justify-center">
         <a href='/about' className="hover:opacity-90">
           <Image
             src="/Ch_logo.jpg"

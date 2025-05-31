@@ -239,11 +239,11 @@ const Calendar = () => { // コンポーネント名をCalendarに修正
       )}
 
        {/* 認証フローへの誘導など、必要に応じて追加情報を表示 */}
-       {!loading && !error && events.length === 0 && (
+       {!loading && !error && events.length === 0 || error && (
            <p className='mt-4'>
                カレンダーイベントが表示されない場合は、
                <a href="/api/auth/google" className="text-blue-600 hover:underline">Googleアカウントとの連携</a>
-               が必要かもしれません。
+               が必要かもしれません。Googleにログインしてください。
            </p>
        )}
 

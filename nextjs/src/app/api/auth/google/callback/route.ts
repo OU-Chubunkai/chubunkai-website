@@ -35,11 +35,8 @@ export async function GET(req: NextRequest) {
         console.error('Failed to save tokens to file:', saveError);
         // トークン取得は成功したのでエラーにはしないがログを出す
     }
-
-
-    // 認証成功後、任意のページにリダイレクト
-    // 例: トップページやカレンダー表示ページ
-    return NextResponse.redirect(new URL('/', req.url)); // プロジェクトのトップページにリダイレクト
+    const url = process.env.NEXT_PUBLIC_API_BASE_URL || "/";
+    return NextResponse.redirect(new URL(url, req.url));
 
   } catch (error: unknown) {
     if (error instanceof Error)

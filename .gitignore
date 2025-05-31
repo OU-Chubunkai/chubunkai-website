@@ -2,3 +2,4 @@
 nextjs-app/
 db/init.sql
 docker-compose.prod.yml
+nextjs/tokens.json

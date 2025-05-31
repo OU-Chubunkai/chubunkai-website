@@ -35,7 +35,7 @@ const BlogNewPosts = (props: { page: number, limit: number, headline: string }) 
   return (
     <div className='bg-[#be8e8e] w-full h-full max-w-[1200px] max-h-[580px] text-center shadow-[0_2px_4px_rgba(0,0,0,0.1)] mx-auto my-0 py-[20px] rounded-lg'>
 
-      <div className='text-[3rem] text-amber-950 place-items-center mt-4'>
+      <div className='flex flex-col items-center justify-center text-[3rem] text-amber-950 mt-4'>
         <FaRegNewspaper />
         <h2 className='text-[2rem]  font-bold text-amber-950 mt-1 mb-1 border-b-4'>{props.headline}</h2>
       </div>

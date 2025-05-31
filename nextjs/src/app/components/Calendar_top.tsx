@@ -179,7 +179,7 @@ const Calendar_top = () => { // コンポーネント名をCalendarに修正
   
   return (
     <div className='container w-full max-w-[800px] md:max-w-[1200px] mx-auto bg-amber-950 text-center shadow-[0_2px_4px_rgba(0,0,0,0.1)] my-0 px-5 py-[20px] rounded-lg overflow-x-auto'>
-      <div className='text-[2rem] place-items-center mt-4'>
+      <div className='flex flex-col items-center justify-center text-[2rem] mt-4'>
         <FaCalendarAlt />
         <h2 className='text-[2rem] font-bold text-[#f9f9f9] text-center mt-2 mb-4 border-b-4'>活動予定</h2> {/* mbを増やしました */}
       </div>
@@ -232,11 +232,11 @@ const Calendar_top = () => { // コンポーネント名をCalendarに修正
       )}
 
        {/* 認証フローへの誘導など、必要に応じて追加情報を表示 */}
-       {!loading && !error && events.length === 0 && (
+       {!loading && !error && events.length === 0 || error && (
            <p className='mt-4'>
                カレンダーイベントが表示されない場合は、
                <a href="/api/auth/google" className="text-blue-600 hover:underline">Googleアカウントとの連携</a>
-               が必要かもしれません。
+               が必要かもしれません。Googleにログインしてください。
            </p>
        )}
     </div>

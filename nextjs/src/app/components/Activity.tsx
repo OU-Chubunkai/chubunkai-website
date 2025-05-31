@@ -4,9 +4,9 @@ import { FaBookmark } from "react-icons/fa";
 const Activity = () => {
   return (
     <div className='container max-w-[800px] md:max-w-[1200px] mx-auto'>
-      <div className='text-[3rem] place-items-center mt-4 text-amber-950'>
-          <CiFlag1 />
-          <h2 className='text-[2rem] font-bold text-center mt-0 mb-6 border-b-4'>活動内容</h2> {/* mbを増やしました */}
+      <div className='flex flex-col items-center justify-center text-[3rem] mt-4 text-amber-950'>
+        <CiFlag1 />
+        <h2 className='text-[2rem] font-bold text-center mt-0 mb-6 border-b-4'>活動内容</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2">
